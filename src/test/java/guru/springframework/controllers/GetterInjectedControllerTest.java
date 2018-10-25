@@ -11,16 +11,16 @@ import static org.junit.Assert.assertEquals;
  */
 public class GetterInjectedControllerTest {
 
-    private GetterInjectedController setterInjectedController;
+    private GetterInjectedController getterInjectedController;
 
     @Before
     public void setUp() throws Exception {
-        this.setterInjectedController = new GetterInjectedController();
-        this.setterInjectedController.setGreetingService(new GreetingServiceImpl());
+        this.getterInjectedController = new GetterInjectedController();
+        this.getterInjectedController.setGreetingService(new GreetingServiceImpl());
     }
 
     @Test
     public void testGreeting() throws Exception {
-        assertEquals(GreetingServiceImpl.HELLO_GURUS, setterInjectedController.sayHello());
+        assertEquals(GreetingServiceImpl.HELLO_GURUS, getterInjectedController.sayHello());
     }
 }
